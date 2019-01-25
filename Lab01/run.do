@@ -1,6 +1,7 @@
 #compiling design modules
+vlib work
 
-#vlog testbench.v RippleCarryCounter.v TFlipFlopModule.v DFlipFlopModule.v
+vlog testbench.v RippleCarryCounter.v TFlipFlopModule.v DFlipFlopModule.v
 
 #no optimization
 vsim -novopt work.tb

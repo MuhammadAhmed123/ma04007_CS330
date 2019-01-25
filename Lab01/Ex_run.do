@@ -1,4 +1,5 @@
 #compiling design modules
+vlib work
 
 vlog Ex_testbench.v Ex_RippleCarryCounter.v Ex_TFlipFlopModule.v Ex_DFlipFlopModule.v
 

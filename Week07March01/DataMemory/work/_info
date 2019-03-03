@@ -1,0 +1,34 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Ahmed/Documents/ComputerArchitectureLabs/Week07March01/DataMemory
+vtb
+DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1551636918
+!i10b 1
+!s100 =aFoCQbBgl[^7i[IJf`[?3
+IkWC3YYChX`Nk><[MC61zF3
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 tb_sv_unit
+S1
+R0
+w1551636634
+8tb.sv
+Ftb.sv
+L0 1
+OP;L;10.4a;61
+r1
+!s85 0
+31
+!s108 1551636918.000000
+!s107 dataMemory.sv|tb.sv|
+!s90 -reportprogress|300|tb.sv|dataMemory.sv|
+!s101 -O0
+!i113 1
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0

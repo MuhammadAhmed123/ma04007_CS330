@@ -21,9 +21,9 @@ module tb(
       #5 memRead = 1'b0;    //sec=15, closing read operations
       //debugging write operations
       #0 memAdd = 64'b0;
-      #10 memWrite = 1'b1;   //sec=25, writing in 0th byte of memory
-      #10 memAdd = 64'hF;    //sec=35, writing in 15th byte of memory
-      #10 memAdd = 64'hA;    //sec=45, writing in 10th byte of memory
+      #10 memWrite = 1'b1;   //sec=25, writing in 0-7th byte of memory
+      #10 memAdd = 64'h10;    //sec=35, writing in 16-23th byte of memory
+      #10 memAdd = 64'h8;    //sec=45, writing in 8-15th byte of memory
       #5 memAdd = 64'h8;     //sec=50, won't write in 8th byte of memory because clk negative
     end
 

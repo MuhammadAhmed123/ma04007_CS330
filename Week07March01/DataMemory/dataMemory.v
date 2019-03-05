@@ -22,11 +22,11 @@ module dataMemory(
 
 	integer i;
 
-	always @(posedge clk, memWrite, writeData)
+	always @(posedge clk, memWrite, writeData, memAdd)
 	begin
 		if (memWrite)
-			for (i = 0; i < 64; i = i + 8)
-				memData[{7 + i + memAdd[5:0]} -: 7] <= writeData[{7 + i} -: 7];	//memData[{7 + i + memAdd[5:0]}:{i + memAdd[5:0]}] <= writeData[{7 + i}:{i}];
+			for (i = 0; i < 8; i = i + 1)
+				memData[i + memAdd[5:0]] <= writeData[{7 + i} -: 7];	//memData[{7 + i + memAdd[5:0]}:{i + memAdd[5:0]}] <= writeData[{7 + i}:{i}];
 	end
 
 endmodule

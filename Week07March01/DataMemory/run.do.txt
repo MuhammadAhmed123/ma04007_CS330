@@ -1,4 +1,4 @@
-vlog tb.sv dataMemory.sv
+vlog tb.v dataMemory.v
 
 vsim -novopt work.tb
 
@@ -10,5 +10,6 @@ add wave sim:/tb/clk
 add wave sim:/tb/memWrite
 add wave sim:/tb/memRead
 add wave sim:/tb/readData
+add wave sim:/tb/myMemory/memData
 
-run 100ns
+run 60ns

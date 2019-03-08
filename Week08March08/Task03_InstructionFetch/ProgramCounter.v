@@ -6,13 +6,13 @@ module ProgramCounter(
 
   initial
   PC_Out = 64'b0;
-  
-	always@ (posedge clk, reset)
+	
+	always@(posedge clk)
 	begin
 	if (reset == 1'b1)
-		PC_Out <= 64'b0;
+		PC_Out = 64'b0;
 	else
-		PC_Out <= PC_In;	
+	  PC_Out = PC_In;
 	end
 	
 endmodule

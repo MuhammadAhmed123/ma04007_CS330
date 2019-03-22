@@ -1,7 +1,7 @@
 module dataMemory(
 	input [63:0] memAdd, writeData,
 	input clk, memWrite, memRead,
-	output reg [63:0] readData
+	output wire [63:0] readData
 	);
 
 	reg [7:0] memData [63:0];
@@ -13,12 +13,15 @@ module dataMemory(
 		for (index = 0; index < 64; index = index + 1)
 			memData[index] <= index;
 	end
-
+	
+	/*
 	always @(memAdd, memRead)
 	begin
 		if (memRead)
 			readData <= {memData[memAdd[5:0]+7], memData[memAdd[5:0]+6], memData[memAdd[5:0]+5], memData[memAdd[5:0]+4], memData[memAdd[5:0]+3], memData[memAdd[5:0]+2], memData[memAdd[5:0]+1], memData[memAdd[5:0]]};
 	end
+	*/
+	assign readData = {memData[memAdd[5:0]+7], memData[memAdd[5:0]+6], memData[memAdd[5:0]+5], memData[memAdd[5:0]+4], memData[memAdd[5:0]+3], memData[memAdd[5:0]+2], memData[memAdd[5:0]+1], memData[memAdd[5:0]]};
 
 	integer i;
 

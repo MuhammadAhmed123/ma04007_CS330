@@ -1,6 +1,6 @@
 module instructionMemory(
 	input [63:0] insAdd,
-	output reg [31:0] ins
+	output wire [31:0] ins
 	);
 	
 	reg [7:0] memReg [15:0];		//16 8-bits memory registers
@@ -12,9 +12,11 @@ module instructionMemory(
 		memReg[index] <= index;		//initializing 16 locations with arbitrary values
 	end
 
-	always @(insAdd)
+	/*always @(insAdd)
 	begin
 		ins <= {memReg[insAdd[3:0]+3], memReg[insAdd[3:0]+2], memReg[insAdd[3:0]+1], memReg[insAdd[3:0]]};
 	end
+	*/
+	assign ins = {memReg[insAdd[3:0]+3], memReg[insAdd[3:0]+2], memReg[insAdd[3:0]+1], memReg[insAdd[3:0]]};
 		
 endmodule

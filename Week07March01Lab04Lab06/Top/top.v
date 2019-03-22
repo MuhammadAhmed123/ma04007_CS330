@@ -12,6 +12,8 @@ module top(
 
     wire [63:0] WriteData;
     wire clk, reset, RegWrite; 
+	
+	assign reset = 1'b0;
 
     InstructionParser myParser(ins, opcode, rd, func3, rs1, rs2, func7);
 

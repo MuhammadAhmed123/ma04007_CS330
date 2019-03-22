@@ -14,7 +14,7 @@ module registerFile(
 		Registers[index] <= index;		//Registers[index] <= 64'd{index};
 	end
 	
-	always @(posedge clk, RegWrite)
+	always @(posedge clk)
 	begin
 		if (RegWrite == 1'b1 && RD != 5'b0)
 			Registers[RD] <= WriteData;

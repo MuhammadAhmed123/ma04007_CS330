@@ -34,7 +34,7 @@ module tb();
 		#5 RD = 5'b1;           //at 15 seconds first registers will be overwritten
 		#5 RegWrite = 1'b0;   //20 seconds
 		#0 RD = 5'hA;      //11th register won't be written because reg write is 0
-		#3 RegWrite = 1'b1;   //23 seconds, still 10th register will not be written		because clk is 0 but at 25th seconds it will be written
+		#3 RegWrite = 1'b1;   //23 seconds, still 11th register will not be written because clk is 0 but at 25th seconds it will be written
 		//debugging read data part
 		//currently at uptill now we are reading values of 0 register because RS1 and RS2 are 0
 		#2 reset = 1'b0;
